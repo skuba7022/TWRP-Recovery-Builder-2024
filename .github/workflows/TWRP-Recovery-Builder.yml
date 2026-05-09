@@ -6,7 +6,7 @@ on:
       MANIFEST_BRANCH:
         description: 'TWRP Minimal-Manifest Branch'
         required: true
-        default: 'twrp-14.1'
+        default: 'twrp-12.1'
         type: choice
         options:
         - twrp-14.1
@@ -50,8 +50,8 @@ on:
       RECOVERY_INSTALLER:
         description: 'Include recovery installer.zip'
         type: boolean
-        required: true
-        default: true
+       required: false
+       default: false
 jobs:
   build:
     name: Build TWRP by ${{ github.actor }}
