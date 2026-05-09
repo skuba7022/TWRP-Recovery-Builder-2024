@@ -49,9 +49,9 @@ on:
         type: boolean
       RECOVERY_INSTALLER:
         description: 'Include recovery installer.zip'
-        type: boolean
-       required: false
-       default: false
+        type: boolean 
+        required: true
+        default: false
 jobs:
   build:
     name: Build TWRP by ${{ github.actor }}
