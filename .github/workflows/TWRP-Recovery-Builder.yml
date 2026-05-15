@@ -50,7 +50,7 @@ on:
       RECOVERY_INSTALLER:
         description: 'Include recovery installer.zip'
         type: boolean 
-        required: true
+        required: false
         default: false
 jobs:
   build:
