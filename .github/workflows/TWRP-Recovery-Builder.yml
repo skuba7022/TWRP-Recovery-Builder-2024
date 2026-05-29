@@ -222,7 +222,7 @@ jobs:
         
     - name: Run AI CI Healer on Failure
       if: failure()
-      uses: mariorazo97/ai-ci-healer@v1
+      uses: mariorazo97/ai-ci-healer@v1.0.0
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         llm-provider: "gemini" # Change to "gemini" if you prefer Google's models
