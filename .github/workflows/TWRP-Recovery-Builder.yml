@@ -63,7 +63,7 @@ jobs:
       contents: write
     steps:
     - name: Check Out
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Display Inputs
       run: |
@@ -99,7 +99,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: zulu
-        java-version: 8
+        java-version: 17
 
     - name: Install Git-Repo
       run: |
@@ -109,7 +109,7 @@ jobs:
         sudo ln -sf ~/bin/repo /usr/bin/repo
 
     - name: Check Manifest Branch
-      uses: haya14busa/action-cond@v1
+      uses: haya14busa/action-cond@v1.2.1
       id: manifest
       with:
         cond: ${{ github.event.inputs.MANIFEST_BRANCH == 'twrp-11' || github.event.inputs.MANIFEST_BRANCH == 'twrp-12.1'  || github.event.inputs.MANIFEST_BRANCH == 'twrp-14.1' }}
