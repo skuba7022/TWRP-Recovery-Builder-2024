@@ -32,11 +32,11 @@ on:
       BUILD_TARGET:
         description: 'Specify your Build Target' 
         required: true
-        default: 'boot'
+        default: 'vendor_boot'
         type: choice
         options:
         - boot
-        - vendorboot
+        - vendor_boot
       LDCHECK:
         description: 'Path of blobs to check' 
         required: true
